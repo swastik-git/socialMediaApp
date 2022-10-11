@@ -1,0 +1,13 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "AppFolders/assets/fonts/Merienda-Bold.ttf",
+      "sha1": "ef31c7c8bf7a3817dd1b3d5e0ca0ec1ba5ceba1f"
+    },
+    {
+      "path": "AppFolders/assets/fonts/Merienda-Regular.ttf",
+      "sha1": "69f1b584e429f9085c01666287a1a7a0efbfd960"
+    }
+  ]
+}
