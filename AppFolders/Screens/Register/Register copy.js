@@ -6,12 +6,12 @@ import PrimaryButton from '../../Components/PrimaryButton'
 import Colors from '../../Constants/Colors'
 
 const Register = ({ navigation }) => {
-    const [showHideImg, toggleshowHideImg] = useState(1)
+    const [size, setSize] = useState(300)
     return (
         <SafeAreaView style={styles.container}>
-            {showHideImg ? <View style={styles.imageHolder}>
-                <RegisterImage width={300} height={300} />
-            </View> : null}
+            <View style={styles.imageHolder}>
+                <RegisterImage width={size} height={size} />
+            </View>
             <ScrollView style={styles.s2}>
                 <Text style={head1}>Create a new account</Text>
                 <Text style={styles.link2}>Already registered?&nbsp;
@@ -27,8 +27,7 @@ const Register = ({ navigation }) => {
                     <TextInput style={styles.input}
                         placeholder="Enter your Name"
                         placeholderTextColor={Colors.color3}
-                        onFocus={() => toggleshowHideImg(!showHideImg)}
-                        onBlur={() => toggleshowHideImg(!showHideImg)}
+                        onFocus={() => setSize(200)}
                     />
                 </View>
                 <View style={styles.formgroup}>
@@ -36,8 +35,7 @@ const Register = ({ navigation }) => {
                     <TextInput style={styles.input}
                         placeholder="Enter your Email"
                         placeholderTextColor={Colors.color3}
-                        onFocus={() => toggleshowHideImg(!showHideImg)}
-                        onBlur={() => toggleshowHideImg(!showHideImg)}
+                        onFocus={() => setSize(200)}
                     />
                 </View>
                 <View style={styles.formgroup}>
@@ -45,8 +43,7 @@ const Register = ({ navigation }) => {
                     <TextInput style={styles.input} placeholder="Enter your password"
                         placeholderTextColor={Colors.color3}
                         secureTextEntry={true}
-                        onFocus={() => toggleshowHideImg(!showHideImg)}
-                        onBlur={() => toggleshowHideImg(!showHideImg)}
+                        onFocus={() => setSize(200)}
 
                     />
                 </View>
@@ -56,14 +53,12 @@ const Register = ({ navigation }) => {
                         placeholderTextColor={Colors.color3}
                         placeholder="Enter your password again"
                         secureTextEntry={true}
-                        onFocus={() => toggleshowHideImg(!showHideImg)}
-                        onBlur={() => toggleshowHideImg(!showHideImg)}
+                        onFocus={() => setSize(200)}
+                        onBlur={() => setSize(300)}
 
                     />
                 </View>
-                <PrimaryButton
-                    onPress={() => navigation.navigate('enterOtp')}
-                >Register</PrimaryButton>
+                <PrimaryButton>Register</PrimaryButton>
             </ScrollView>
         </SafeAreaView>
 
@@ -91,7 +86,7 @@ const styles = StyleSheet.create({
         width: "100%",
         height: "45%",
         paddingHorizontal: 20,
-        marginTop: 10,
+        // marginTop: 10,
     },
     formgroup: {
         display: "flex",

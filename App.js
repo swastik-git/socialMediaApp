@@ -8,26 +8,32 @@ const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <EnterOtp />
-    // <NavigationContainer>
-    //   <Stack.Navigator>
-    //     <Stack.Screen name="Welcome" component={WelcomeScreen}
-    //       options={{
-    //         headerShown: false
-    //       }}
-    //     />
-    //     <Stack.Screen name="login" component={Login}
-    //       options={{
-    //         headerShown: false
-    //       }}
-    //     />
-    //     <Stack.Screen name="register" component={Register}
-    //       options={{
-    //         headerShown: false
-    //       }}
-    //     />
-    //   </Stack.Navigator>
-    // </NavigationContainer>
+    // <EnterOtp />
+    // k/b avoiding view
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Welcome" component={WelcomeScreen}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen name="login" component={Login}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen name="register" component={Register}
+          options={{
+            headerShown: false
+          }}
+        />
+        <Stack.Screen name="enterOtp" component={EnterOtp}
+          options={{
+            headerShown: false
+          }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
 
