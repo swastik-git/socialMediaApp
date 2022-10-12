@@ -1,9 +1,9 @@
 import React from 'react'
 import { View, StyleSheet, Text, TextInput, SafeAreaView } from 'react-native'
-import Colors from "../Constants/Colors"
-import LoginImage from "../assets/images/SVGImages/signin.svg"
-import { head1, head2, button1 } from "../CommonStyling/Common"
-import PrimaryButton from '../Components/PrimaryButton'
+import Colors from "../../Constants/Colors"
+import LoginImage from "../../assets/images/SVGImages/LoginGirl.svg"
+import { head1, head2, button1 } from "../../CommonStyling/Common"
+import PrimaryButton from '../../Components/PrimaryButton'
 
 const Login = ({ navigation }) => {
     return (
@@ -24,6 +24,7 @@ const Login = ({ navigation }) => {
                     <Text style={styles.label}>Password</Text>
                     <TextInput style={styles.input} placeholder="Enter your password"
                         placeholderTextColor={Colors.color3}
+                        secureTextEntry={true}
                     />
                 </View>
                 <View style={styles.fp}>
@@ -88,7 +89,7 @@ const styles = StyleSheet.create({
 
     input: {
         // color: "rgba(0,0,0,0.7)",
-        color: Colors.color4,
+        color: Colors.color1,
         backgroundColor: "rgba(255,255,255,0.2)",
         borderRadius: 20,
         paddingHorizontal: 10,

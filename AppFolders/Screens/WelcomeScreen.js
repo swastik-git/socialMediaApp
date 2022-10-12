@@ -1,14 +1,14 @@
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 import Colors from '../Constants/Colors';
-import WelcomeSvg from "../assets/images/SVGImages/Welcome.svg"
+import WelcomeSvg from "../assets/images/SVGImages/WELCOME4img.svg"
 import PrimaryButton from "../Components/PrimaryButton"
 
 const WelcomeScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={styles.imageHolder}>
-                <WelcomeSvg width={450} height={450} />
+                <WelcomeSvg width={350} height={350} />
             </View>
             <View style={styles.TextData}>
                 <Text style={styles.WelcomeText}>Welcome</Text>

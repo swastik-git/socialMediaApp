@@ -1,15 +1,15 @@
 import React from 'react'
 import { View, StyleSheet, SafeAreaView, TouchableOpacity, ScrollView, Text, TextInput } from 'react-native'
-import RegisterImage from "../assets/images/SVGImages/MobileLogin.svg"
-import { button1, head1 } from '../CommonStyling/Common'
-import PrimaryButton from '../Components/PrimaryButton'
-import Colors from '../Constants/Colors'
+import RegisterImage from "../../assets/images/SVGImages/signup1.svg"
+import { button1, head1 } from '../../CommonStyling/Common'
+import PrimaryButton from '../../Components/PrimaryButton'
+import Colors from '../../Constants/Colors'
 
 const Register = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.imageHolder}>
-                <RegisterImage width={320} height={320} />
+                <RegisterImage width={300} height={300} />
             </View>
             <ScrollView style={styles.s2}>
                 <Text style={head1}>Create a new account</Text>
@@ -39,6 +39,8 @@ const Register = ({ navigation }) => {
                     <Text style={styles.label}>Password</Text>
                     <TextInput style={styles.input} placeholder="Enter your password"
                         placeholderTextColor={Colors.color3}
+                        secureTextEntry={true}
+
                     />
                 </View>
                 <View style={styles.formgroup}>
@@ -46,6 +48,8 @@ const Register = ({ navigation }) => {
                     <TextInput style={styles.input}
                         placeholderTextColor={Colors.color3}
                         placeholder="Enter your password again"
+                        secureTextEntry={true}
+
                     />
                 </View>
                 <PrimaryButton>Register</PrimaryButton>
@@ -73,7 +77,8 @@ const styles = StyleSheet.create({
         maxHeight: "55%",
         maxWidth: "100%",
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+        padding:15
     },
     s2: {
         display: "flex",
@@ -98,7 +103,7 @@ const styles = StyleSheet.create({
         color: Colors.color4,
     },
     input: {
-        color: Colors.color4,
+        color: Colors.color1,
         backgroundColor: "rgba(255,255,255,0.2)",
         borderRadius: 20,
         padding: 10,
