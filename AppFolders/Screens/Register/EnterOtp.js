@@ -4,6 +4,7 @@ import RegisterImage from "../../assets/images/SVGImages/EnterOTP.svg"
 import Colors from '../../Constants/Colors'
 import { head1 } from '../../CommonStyling/Common'
 import PrimaryButton from '../../Components/PrimaryButton'
+import BottomNavBar from '../../Components/BottomNavBar'
 
 const EnterOtp = () => {
 
@@ -144,6 +145,7 @@ const styles = StyleSheet.create({
         padding: 20,
         fontSize: 20,
     },
+ 
 });
 
 
